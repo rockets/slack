@@ -1,4 +1,4 @@
-![Rockets](header.gif) [![Author](http://img.shields.io/badge/author-@rudi_theunissen-336699.svg?style=flat-square)](https://twitter.com/rudi_theunissen) [![Version](https://img.shields.io/npm/v/rockets.svg?style=flat-square)](https://www.npmjs.com/package/rockets-slack) [![Dependencies](https://img.shields.io/david/rockets/slack.svg?style=flat-square)](https://david-dm.org/rockets/slack)
+![Rockets](header.gif) [![Author](http://img.shields.io/badge/author-@rudi_theunissen-00aced.svg?style=flat-square)](https://twitter.com/rudi_theunissen) [![Version](https://img.shields.io/npm/v/rockets.svg?style=flat-square)](https://www.npmjs.com/package/rockets-slack) [![Dependencies](https://img.shields.io/david/rockets/slack.svg?style=flat-square)](https://david-dm.org/rockets/slack)
 
 ---
 
@@ -13,8 +13,9 @@ npm install rockets-slack
 ## Usage
 
 ```js
-var RocketsSlack = require('rockets-slack');
+var Client = require('rockets-slack');
 
+// Integration configuration.
 var config = {
 
     // Slack webhook URL
@@ -23,7 +24,7 @@ var config = {
     // Channel subscriptions
     channels: {
         
-        // Configuration for post events
+        // Configuration for post events (optional)
         posts: {
 
             // Highlight color in Slack for posts
@@ -34,7 +35,7 @@ var config = {
             exclude: {}
         },
 
-        // Configuration for comment events
+        // Configuration for comment events (optional)
         comments: {
 
             // Highlight color in Slack for comments
@@ -47,7 +48,8 @@ var config = {
     }
 };
 
-var client = new RocketsSlack(config);
+// Create a new client using the configuration. You can create mutliple clients if you have more than one configuration.
+var client = new Client(config);
 
 // Establish a connection and start listening for events.
 client.run();
@@ -55,7 +57,9 @@ client.run();
 
 ## Filters
 
-See [rockets/rockets](https://github.com/rockets/rockets) for a complete list of filtering rules.
+See [rockets/rockets](https://github.com/rockets/rockets) for a complete list of filtering rules. 
+
+**Warning**: if no rules are specified, *all* models will be included.
 
 ## Credits
 
