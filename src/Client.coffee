@@ -138,12 +138,10 @@ module.exports = class Client
   run: () ->
     # When a relevant comment is received
     @client.on 'comment', (model) =>
-      console.log(this, model)
       @sendToSlack @formatComment(model?.data)
 
     # When a relevant post is received
     @client.on 'post', (model) =>
-      console.log(this, model)
       @sendToSlack @formatPost(model?.data)
 
     # When the socket connection is established
