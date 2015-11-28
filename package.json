@@ -1,6 +1,6 @@
 {
   "name": "rockets-slack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Slack integration client for rockets/rockets",
   "license": "MIT",
   "keywords": [
