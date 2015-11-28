@@ -154,14 +154,14 @@ module.exports = class Client
         include = @config.channels.comments.include
         exclude = @config.channels.comments.exclude
 
-        @client.subscribe 'comments', include
+        @client.subscribe 'comments', include, exclude
 
       # Subscribe to receive posts
       if @config.channels?.posts
         include = @config.channels.posts.include
         exclude = @config.channels.posts.exclude
 
-        @client.subscribe 'posts', include
+        @client.subscribe 'posts', include, exclude
 
     # Attempt to connect to the server
     @client.connect()
