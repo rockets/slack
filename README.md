@@ -28,23 +28,31 @@ var config = {
         posts: {
 
             // Highlight color in Slack for posts
-            color: "#ff4500"
+            color: "#ff4500",
 
             // Filtering rules for posts
-            include: {},
-            exclude: {}
+            exclude: {},
+            include: {
+                contains: [
+                    "abc",
+                ]
+            },
         },
 
         // Configuration for comment events (optional)
         comments: {
 
             // Highlight color in Slack for comments
-            color: "#336699"
+            color: "#336699",
 
             // Filtering rules for comments
-            include: {},
-            exclude: {}
-        }
+            exclude: {},
+            include: {
+                contains: [
+                    "xyz",
+                ]
+            },
+        },
     }
 };
 

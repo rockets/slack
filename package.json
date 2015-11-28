@@ -13,7 +13,7 @@
     "email": "rudolf.theunissen@gmail.com",
     "url": "https://github.com/rtheunissen"
   },
-  "main": "lib/Slack.js",
+  "main": "lib/Client.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/rockets/slack"
